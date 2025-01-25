@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Projet Postale</title>
+</head>
+<body>
+    <h1>Simulateur de File d'Attente - Bureau de Poste</h1>
+    <div class="row">
+        <div class="col-6">
+            <form id="form-add-client">
+                <div class="form-group">
+                    <label for="name" class="form-label">Nom :</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="service" class="form-label">Service demandé :</label>
+                    <select id="service" class="form-control" required>
+                        <option value="Envoi de courrier">Envoi de courrier</option>
+                        <option value="Retrait de colis">Retrait de colis</option>
+                        <option value="Paiement de facture">Paiement de facture</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="priority" class="form-check-label">Prioritaire :</label>
+                    <input type="checkbox" id="priority" class="form-check-input">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Ajouter le client</button>
+            </form>
+        
+            <form id="form-delete-client">
+                <div class="form-group">
+                    <label for="name-delete" class="form-label">Nom du client à supprimer :</label>
+                    <input type="text" id="name-delete" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Supprimer le client</button>
+            </form>
+        
+            <button id="serve-client" class="btn btn-primary mt-2">Servir un client</button>
+        
+            <div id="message"></div>
+        
+            <div class="file-attente">
+                <h2>File d'Attente :</h2>
+                <ul id="queue"></ul>
+            </div>
+
+        </div>
+        <div class="col-6">
+            <div class="historique">
+                <h2>Journal des clients servis :</h2>
+                <ul id="historique"></ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

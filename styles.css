@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.file-attente, .historique {
+    margin-top: 20px;
+}
+.client {
+    margin: 5px 0;
+}
